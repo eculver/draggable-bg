@@ -13,11 +13,11 @@ Basic Usage
 
 Simply include the module on the page::
 
-    <script src="draggable-background.js"></script>
+    <script src="draggable-bg.js"></script>
 
 Instantiate and render the widget::
 
-    YUI.use('widget-draggable-background', function(Y) {
+    YUI.use('widget-draggable-bg', function(Y) {
         var widget = new Y.Widget.DraggableBackground({
             boundingBox: '#foo'
             imageUrl: 'http://someimagepath.com/image.png',
