@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Draggable Background Widget</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="yui3-skin-sam yui-skin-sam">
+        <header>
+            <h1>Draggable Background Widget</h1>
+        </header>
+
+        <p>
+            Click anywhere on the image to start dragging image around
+        </p>
+
+        <div id="durr"></div>
+
+        <div id="log" class="yui3-widget yui3-console" style="width:400px; height: 600px;"></div>
+
+        <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js" charset="utf-8"></script>
+        <script src="../src/draggable-background.js"></script>
+        <script>
+                YUI({debug: false}).use('widget-draggable-bg', function(Y) {
+                    var w = new Y.Widget.DraggableBackground({
+                        boundingBox: '#durr',
+                        imageUrl: 'http://dl.dropbox.com/u/1049965/Boston-City-Flow.jpg'
+                    });
+                    w.render();
+                });
+        </script>
+    </body>
+</html>
