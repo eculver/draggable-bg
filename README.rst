@@ -4,9 +4,9 @@ Draggable Background Widget
 
 This widget simply creates a window-like view for an image, similar to the way Google Maps work. Currently, there is just support for YUI3 in the form of a widget, but jQuery plugin will be coming shortly.
 
----
-YUI
----
+-----
+YUI 3
+-----
 
 Basic Usage
 -----------
