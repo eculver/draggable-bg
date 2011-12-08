@@ -111,11 +111,6 @@ YUI.add('widget-draggable-bg', function(Y) {
     Y.extend(DraggableBackground, Y.Widget, {
 
         initializer: function(config) {
-            Y.log(this.get('contentBox'));
-            Y.log(this.get('imageUrl'));
-            Y.log(this.get('viewWidth'));
-            Y.log(this.get('viewHeight'));
-
             // setup our internal image
             var image = new Image();
             image.src = this.get('imageUrl');
@@ -286,14 +281,14 @@ YUI.add('widget-draggable-bg', function(Y) {
                 xy = node.getStyle('backgroundPosition').replace(/%/g, '').replace('px', '').split(' '),
 
                 // individual position components
-                currX = parseInt(xy[0]),
-                currY = parseInt(xy[1]),
+                currX = parseInt(xy[0], 10),
+                currY = parseInt(xy[1], 10),
 
                 // calculate new position
                 newX = currX - diffX,
                 newY = currY - diffY;
 
-            Y.log('new position: ' + newX + 'px ' + newY + 'px');
+            //Y.log('new position: ' + newX + 'px ' + newY + 'px');
 
             // make sure not to scale past image boundaries before adjusting
             if(!(newX <= 0 && newX >= -(image.width - this.get('viewWidth')))) {
