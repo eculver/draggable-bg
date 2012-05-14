@@ -292,8 +292,8 @@ YUI.add('widget-draggable-bg', function(Y) {
                 xy = node.getStyle('backgroundPosition').replace(/%/g, '').replace('px', '').split(' '),
 
                 // individual position components
-                currX = parseInt(xy[0]),
-                currY = parseInt(xy[1]),
+                currX = parseInt(xy[0], 10),
+                currY = parseInt(xy[1], 10),
 
                 // calculate new position
                 newX = currX - diffX,
