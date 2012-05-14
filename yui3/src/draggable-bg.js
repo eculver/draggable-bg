@@ -159,6 +159,12 @@ YUI.add('widget-draggable-bg', function(Y) {
             node.on('mousemove', this._onMouseMove, this);
             node.on('mouseup', this._onMouseUp, this);
             node.on('mouseout', this._onMouseOut, this);
+
+            // enable touch support
+            node.on('touchstart', this._onMouseDown, this);
+            node.on('touchmove', this._onMouseMove, this);
+            node.on('touchend', this._onMouseUp, this);
+            node.on('touchcancel', this._onMouseOut, this);
         },
 
         /**
@@ -313,6 +319,7 @@ YUI.add('widget-draggable-bg', function(Y) {
 }, '0.0.1', {
     requires: [
         'node',
-        'widget'
+        'widget',
+        'event-touch'
     ]
 });
