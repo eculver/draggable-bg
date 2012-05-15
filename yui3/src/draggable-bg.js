@@ -180,8 +180,6 @@ YUI.add('widget-draggable-bg', function(Y) {
          * @private
          */
         _onMouseDown: function(e) {
-            e.preventDefault();
-
             // reset last position to where the user just clicked
             var currentPosition = [e.pageX, e.pageY];
             this._set('lastPosition', currentPosition);
@@ -220,7 +218,6 @@ YUI.add('widget-draggable-bg', function(Y) {
          * @private
          */
         _onMouseUp: function(e) {
-            e.preventDefault();
             this._set('isDragging', false);
         },
 
@@ -232,7 +229,6 @@ YUI.add('widget-draggable-bg', function(Y) {
          * @private
          */
         _onMouseOut: function(e) {
-            e.preventDefault();
             this._set('isDragging', false);
         },
 
