@@ -128,6 +128,10 @@ YUI.add('widget-draggable-bg', function(Y) {
             Y.detach('mousemove', this._onMouseMove);
             Y.detach('mouseup', this._onMouseUp);
             Y.detach('mouseout', this._onMouseOut);
+            Y.detach('touchstart', this._onMouseDown);
+            Y.detach('touchmove', this._onMouseMove);
+            Y.detach('touchend', this._onMouseUp);
+            Y.detach('touchcancel', this._onMouseOut);
         },
 
         renderUI: function() {
