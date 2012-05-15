@@ -123,6 +123,10 @@ YUI.add('widget-draggable-bg', function(Y) {
             Y.detach('mousemove', this._onMouseMove);
             Y.detach('mouseup', this._onMouseUp);
             Y.detach('mouseout', this._onMouseOut);
+            Y.detach('touchstart', this._onMouseDown);
+            Y.detach('touchmove', this._onMouseMove);
+            Y.detach('touchend', this._onMouseUp);
+            Y.detach('touchcancel', this._onMouseOut);
         },
 
         renderUI: function() {
@@ -171,8 +175,6 @@ YUI.add('widget-draggable-bg', function(Y) {
          * @private
          */
         _onMouseDown: function(e) {
-            e.preventDefault();
-
             // reset last position to where the user just clicked
             var currentPosition = [e.pageX, e.pageY];
             this._set('lastPosition', currentPosition);
@@ -211,7 +213,6 @@ YUI.add('widget-draggable-bg', function(Y) {
          * @private
          */
         _onMouseUp: function(e) {
-            e.preventDefault();
             this._set('isDragging', false);
         },
 
@@ -223,7 +224,6 @@ YUI.add('widget-draggable-bg', function(Y) {
          * @private
          */
         _onMouseOut: function(e) {
-            e.preventDefault();
             this._set('isDragging', false);
         },
 
